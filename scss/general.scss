@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+    
+    &::-webkit-scrollbar-track {
+        background: white;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: #d7d7df;
+        border-radius: 20px;
+    }
+}
+
+.close {
+    animation: disappear 500ms ease-in forwards;
+}
+
+@keyframes appear {
+    from {
+        margin-top: -100vh;
+    }
+    to {
+        margin-top: 0vh;
+    }
+}
+
+@keyframes disappear {
+    from {
+        margin-top: 0vh;
+    }
+    to {
+        margin-top: -100vh;
+    }
+}
