@@ -1,3 +1,94 @@
+@use "../util/colors" as color;
+@use "../util/mixins" as mix;
+
 main {
+    display: block;
+    width: 100%;
+    max-width: 1000px;
     margin-top: 5em;
+    .start {
+        display: block;
+        .plans {
+            @include mix.flexCenter(column);
+            position: relative;
+            background-color: color.$darkViolet;
+            margin-top: -0.5em;
+            padding: 3.5em 0em;
+            gap: 1em;
+            .plans-top-left-img,
+            .plans-bottom-right-img {
+                position: absolute;
+                z-index: 1;
+            }
+            .plans-top-left-img {
+                top: 0;
+                left: 0;
+            }
+            .plans-bottom-right-img {
+                bottom: -12em;
+                right: 0;
+            }
+            h1, p {
+                display: block;
+                width: 85%;
+                max-width: 400px;
+                margin: auto;
+                text-align: center;
+                z-index: 2;
+            }
+            h1 {
+                font-family: 'DM Serif Display', serif;
+                color: color.$veryLightGray;
+                font-weight: lighter;
+                font-size: clamp(1.5rem, 12vw, 4rem);
+            }
+            p {
+                font-family: 'Karla', sans-serif;
+                color: rgb(235, 222, 222);
+                line-height: 1.5;
+            }
+            button {
+                display: block;
+                width: 50%;
+                max-width: 250px;
+                padding: 1em 0em;
+                margin: 1em auto;
+                font-family: 'Karla', sans-serif;
+                text-transform: uppercase;
+                background-color: transparent;
+                border: 2px solid color.$veryLightGray;
+                color: color.$veryLightGray;
+                font-weight: bold;
+                z-index: 2;
+                &:active {
+                    transform: scale(0.9);
+                }
+            }
+        }
+    }
+    .content_sm {
+        display: flex;
+        flex-direction: column;
+        margin-top: 7em;
+        hr {
+            display: block;
+            width: 40%;
+            max-width: 400px;
+            border: none;
+            border-bottom: 1px solid color.$grayishBlue;
+        }
+        h2 {
+            display: block;
+            font-family: 'DM Serif Display', serif;
+            color: color.$veryDarkViolet;
+            font-size: clamp(1.5rem, 13vw, 4rem);
+            font-weight: 500;
+            text-align: center;
+            margin: 0.8em auto;
+        }
+        .ms-box {
+            @include mix.flexCenter(column);
+            
+        }
+    }
 }

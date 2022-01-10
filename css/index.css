@@ -26,7 +26,7 @@ body::-webkit-scrollbar-thumb {
 
 @keyframes appear {
   from {
-    margin-top: -100vh;
+    margin-top: -140vh;
   }
   to {
     margin-top: 0vh;
@@ -37,7 +37,7 @@ body::-webkit-scrollbar-thumb {
     margin-top: 0vh;
   }
   to {
-    margin-top: -100vh;
+    margin-top: -140vh;
   }
 }
 header {
@@ -166,7 +166,100 @@ header .img-bottom-pattern img {
 }
 
 main {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
   margin-top: 5em;
+}
+main .start {
+  display: block;
+}
+main .start .plans {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  position: relative;
+  background-color: #2d2640;
+  margin-top: -0.5em;
+  padding: 3.5em 0em;
+  gap: 1em;
+}
+main .start .plans .plans-top-left-img,
+main .start .plans .plans-bottom-right-img {
+  position: absolute;
+  z-index: 1;
+}
+main .start .plans .plans-top-left-img {
+  top: 0;
+  left: 0;
+}
+main .start .plans .plans-bottom-right-img {
+  bottom: -12em;
+  right: 0;
+}
+main .start .plans h1, main .start .plans p {
+  display: block;
+  width: 85%;
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  z-index: 2;
+}
+main .start .plans h1 {
+  font-family: "DM Serif Display", serif;
+  color: #fafafa;
+  font-weight: lighter;
+  font-size: clamp(1.5rem, 12vw, 4rem);
+}
+main .start .plans p {
+  font-family: "Karla", sans-serif;
+  color: #ebdede;
+  line-height: 1.5;
+}
+main .start .plans button {
+  display: block;
+  width: 50%;
+  max-width: 250px;
+  padding: 1em 0em;
+  margin: 1em auto;
+  font-family: "Karla", sans-serif;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 2px solid #fafafa;
+  color: #fafafa;
+  font-weight: bold;
+  z-index: 2;
+}
+main .start .plans button:active {
+  transform: scale(0.9);
+}
+main .content_sm {
+  display: flex;
+  flex-direction: column;
+  margin-top: 7em;
+}
+main .content_sm hr {
+  display: block;
+  width: 40%;
+  max-width: 400px;
+  border: none;
+  border-bottom: 1px solid #95a9c6;
+}
+main .content_sm h2 {
+  display: block;
+  font-family: "DM Serif Display", serif;
+  color: #2b272f;
+  font-size: clamp(1.5rem, 13vw, 4rem);
+  font-weight: 500;
+  text-align: center;
+  margin: 0.8em auto;
+}
+main .content_sm .ms-box {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=index.css.map */
