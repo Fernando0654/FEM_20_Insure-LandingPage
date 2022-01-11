@@ -1,3 +1,5 @@
+@use "./util/colors" as color;
+
 body {
     margin: 0;
     padding: 0;
@@ -6,11 +8,11 @@ body {
     &::-webkit-scrollbar {
         width: 8px;
     }
-    
+
     &::-webkit-scrollbar-track {
         background: white;
     }
-    
+
     &::-webkit-scrollbar-thumb {
         background-color: #d7d7df;
         border-radius: 20px;

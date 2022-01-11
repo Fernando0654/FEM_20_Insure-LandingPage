@@ -99,12 +99,53 @@ main {
                 font-size: clamp(1.2rem, 8vw, 3.5rem);
             }
             p {
-                @include mix.fontFaceParagraph(500, center, color.$grayishBlue);
+                @include mix.fontFaceParagraph(500, center, color.$darkViolet);
                 font-size: clamp(1rem, 4vw, 2rem);
                 width: 90%;
                 line-height: 1.5;
                 margin: 1em auto;
             }
+        }
+    }
+    .work_content {
+        @include mix.flexCenter(column);
+        width: 85%;
+        min-width: 200px;
+        max-width: 700px;
+        margin: auto;
+        background-color: color.$darkViolet;
+        margin-top: 5em;
+        margin-bottom: 7em;
+        position: relative;
+        overflow: hidden;
+        img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            max-width: 500px;
+            z-index: 2
+        }
+        h3 {
+            @include mix.fontFaceTitle(500, center, color.$veryLightGray);
+            width: 90%;
+            margin: auto;
+            margin-top: 2em;
+            margin-bottom: 1em;
+            line-height: 1;
+            font-size: clamp(1.2rem, 12vw, 3.5rem);
+            z-index: 3;
+        }
+        button {
+            @include mix.fontFaceParagraph(600, center, color.$veryLightGray);
+            text-transform: uppercase;
+            width: 60%;
+            min-width: 100px;
+            max-width: 300px;
+            margin: auto;
+            margin-bottom: 4.5em;
+            padding: 1em 0em;
+            background-color: transparent;
+            border: 2px solid #fff;
         }
     }
 }

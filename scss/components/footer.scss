@@ -1,0 +1,65 @@
+@use "../util/mixins" as mix;
+@use "../util/colors" as color;
+
+footer {
+    @include mix.flexCenter(column);
+    width: 100%;
+    background-color: color.$veryLightGray;
+    position: relative;
+    overflow: hidden;
+    .pattern-footer {
+        position: absolute;
+        top: 0;
+        z-index: 2;
+    }
+    .footer_header {
+        @include mix.flexCenter(column);
+        width: 100%;
+        margin: 4em 0em 2em;
+        z-index: 3;
+        & > img {
+            width: 40%;
+            max-width: 400px;
+            margin: 1.5em auto;
+        }
+        .socials {
+            @include mix.flexCenter(row);
+            padding-top: 1em;
+            padding-bottom: 2.5em;
+            border: none;
+            border-bottom: 1px solid #e8cece;
+            gap: 1.5em;
+            img {
+                width: clamp(2em, 4vw, 5em);
+            }
+        }
+    }
+    .footer_section {
+        @include mix.flexCenter(column);
+        .section_c {
+            @include mix.flexCenter(column);
+            max-width: 500px;
+            margin: auto;
+            gap: 1em;
+            h4, a {
+                @include mix.fontFaceParagraph(700, center, color.$veryDarkViolet);
+                text-transform: uppercase;
+            }
+            h4 {
+                color: color.$darkGrayishViolet;
+            }
+            a {
+                text-decoration: none;
+                &:last-child {
+                    margin-bottom: 1.5em;
+                }
+            }
+        }
+    }
+    .attribution {
+        display: block;
+        width: 100%;
+        @include mix.fontFaceParagraph(700, center, color.$darkViolet);
+        padding: 1em 0em;
+    }
+}
