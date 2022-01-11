@@ -8,6 +8,9 @@ main {
     margin-top: 5em;
     .start {
         display: block;
+        img {
+            width: 100%
+        }
         .plans {
             @include mix.flexCenter(column);
             position: relative;
@@ -31,7 +34,8 @@ main {
             h1, p {
                 display: block;
                 width: 85%;
-                max-width: 400px;
+                min-width: 300px;
+                max-width: 450px;
                 margin: auto;
                 text-align: center;
                 z-index: 2;
@@ -46,19 +50,17 @@ main {
                 font-family: 'Karla', sans-serif;
                 color: rgb(235, 222, 222);
                 line-height: 1.5;
+                font-size: clamp(1rem, 4vw, 1.5rem);
             }
             button {
-                display: block;
+                @include mix.fontFaceParagraph(bold, center, color.$veryLightGray);
                 width: 50%;
                 max-width: 250px;
                 padding: 1em 0em;
                 margin: 1em auto;
-                font-family: 'Karla', sans-serif;
                 text-transform: uppercase;
                 background-color: transparent;
                 border: 2px solid color.$veryLightGray;
-                color: color.$veryLightGray;
-                font-weight: bold;
                 z-index: 2;
                 &:active {
                     transform: scale(0.9);
@@ -78,17 +80,31 @@ main {
             border-bottom: 1px solid color.$grayishBlue;
         }
         h2 {
-            display: block;
-            font-family: 'DM Serif Display', serif;
-            color: color.$veryDarkViolet;
+            @include mix.fontFaceTitle(500, center, color.$veryDarkViolet);
             font-size: clamp(1.5rem, 13vw, 4rem);
-            font-weight: 500;
-            text-align: center;
             margin: 0.8em auto;
         }
         .ms-box {
             @include mix.flexCenter(column);
-            
+            img {
+                width: 25%;
+                max-width: 200px;
+                min-width: 100px;
+                margin: 2em auto;
+            }
+            h3 {
+                @include mix.fontFaceTitle(500, center, color.$veryDarkViolet);
+                width: 90%;
+                margin: auto;
+                font-size: clamp(1.2rem, 8vw, 3.5rem);
+            }
+            p {
+                @include mix.fontFaceParagraph(500, center, color.$grayishBlue);
+                font-size: clamp(1rem, 4vw, 2rem);
+                width: 90%;
+                line-height: 1.5;
+                margin: 1em auto;
+            }
         }
     }
 }

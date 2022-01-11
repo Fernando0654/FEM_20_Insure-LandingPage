@@ -5,3 +5,18 @@
     justify-content: center;
 }
 
+@mixin fontFaceTitle($weight, $align, $color) {
+    display: block;
+    font-family: 'DM Serif Display', serif;
+    font-weight: $weight;
+    text-align: $align;
+    color: $color;
+}
+
+@mixin fontFaceParagraph($weight, $align, $color) {
+    display: block;
+    font-family: 'Karla', sans-serif;
+    font-weight: $weight;
+    text-align: $align;
+    color: $color;
+}

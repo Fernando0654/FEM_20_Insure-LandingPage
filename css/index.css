@@ -174,6 +174,9 @@ main {
 main .start {
   display: block;
 }
+main .start img {
+  width: 100%;
+}
 main .start .plans {
   display: flex;
   flex-direction: column;
@@ -201,7 +204,8 @@ main .start .plans .plans-bottom-right-img {
 main .start .plans h1, main .start .plans p {
   display: block;
   width: 85%;
-  max-width: 400px;
+  min-width: 300px;
+  max-width: 450px;
   margin: auto;
   text-align: center;
   z-index: 2;
@@ -216,19 +220,21 @@ main .start .plans p {
   font-family: "Karla", sans-serif;
   color: #ebdede;
   line-height: 1.5;
+  font-size: clamp(1rem, 4vw, 1.5rem);
 }
 main .start .plans button {
   display: block;
+  font-family: "Karla", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  color: #fafafa;
   width: 50%;
   max-width: 250px;
   padding: 1em 0em;
   margin: 1em auto;
-  font-family: "Karla", sans-serif;
   text-transform: uppercase;
   background-color: transparent;
   border: 2px solid #fafafa;
-  color: #fafafa;
-  font-weight: bold;
   z-index: 2;
 }
 main .start .plans button:active {
@@ -249,10 +255,10 @@ main .content_sm hr {
 main .content_sm h2 {
   display: block;
   font-family: "DM Serif Display", serif;
-  color: #2b272f;
-  font-size: clamp(1.5rem, 13vw, 4rem);
   font-weight: 500;
   text-align: center;
+  color: #2b272f;
+  font-size: clamp(1.5rem, 13vw, 4rem);
   margin: 0.8em auto;
 }
 main .content_sm .ms-box {
@@ -260,6 +266,33 @@ main .content_sm .ms-box {
   flex-direction: column;
   align-content: center;
   justify-content: center;
+}
+main .content_sm .ms-box img {
+  width: 25%;
+  max-width: 200px;
+  min-width: 100px;
+  margin: 2em auto;
+}
+main .content_sm .ms-box h3 {
+  display: block;
+  font-family: "DM Serif Display", serif;
+  font-weight: 500;
+  text-align: center;
+  color: #2b272f;
+  width: 90%;
+  margin: auto;
+  font-size: clamp(1.2rem, 8vw, 3.5rem);
+}
+main .content_sm .ms-box p {
+  display: block;
+  font-family: "Karla", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  color: #95a9c6;
+  font-size: clamp(1rem, 4vw, 2rem);
+  width: 90%;
+  line-height: 1.5;
+  margin: 1em auto;
 }
 
 /*# sourceMappingURL=index.css.map */
