@@ -257,8 +257,17 @@ main {
   max-width: 950px;
   margin-top: 5em;
 }
+main .start.visible,
+main .content_sm.visible,
+main .work_content.visible {
+  opacity: 1;
+  transform: scale(1);
+}
 main .start {
   display: block;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: 0.7s ease-in;
 }
 main .start img {
   width: 100%;
@@ -331,6 +340,9 @@ main .content_sm {
   display: flex;
   flex-direction: column;
   margin-top: 7em;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: 0.7s ease-in;
 }
 main .content_sm hr {
   display: block;
@@ -395,6 +407,9 @@ main .work_content {
   margin-bottom: 7em;
   position: relative;
   overflow: hidden;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: 0.7s ease-in;
 }
 main .work_content img {
   position: absolute;
