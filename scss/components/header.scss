@@ -13,7 +13,7 @@ header {
         position: fixed;
         top: 0;
         width: 100%;
-        max-width: 1000px;
+        max-width: 950px;
         padding: 1.4em 0em;
         background-color: #fff;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.083);
@@ -107,6 +107,9 @@ header {
         }
         .btn {
             border: 2px solid color.$veryLightGray;
+            &:active {
+                transform: scale(0.9);
+            }
         }
     }
     .img-bottom-pattern {
@@ -120,6 +123,69 @@ header {
         img {
             width: 100%;
             max-height: 200px;
+        }
+    }
+}
+
+@media (min-width: 950px) {
+    header {
+        @include mix.defaultViewDesktop;
+        flex-direction: row;
+        position: inherit;
+        background-color: #fff;
+        padding: 0.5em 0em;
+        .header_mobile {
+            position: inherit;
+            width: 30%;
+            background-color: transparent;
+            box-shadow: inherit;
+            margin: inherit;
+            justify-content: start;
+            .logo {
+                width: clamp(50%, 14vw, 100%);
+                margin: 0;
+                margin-left: 1em;
+                img {
+                    width: clamp(50%, 8vw, 80%);
+                }
+            }
+        }
+        nav {
+            @include mix.flexCenter(row);
+            justify-content: end;
+            min-height: inherit;
+            animation: none;
+            transition: none;
+            background-color: transparent;
+            padding: 0em;
+            width: 70%;
+            padding: 0;
+            z-index: 2;
+            a {
+                padding: 1em 0em;
+                margin: auto 1em;
+                font-size: clamp(0.7rem, 1vw, 1.5rem);
+                width: auto;
+                color: color.$grayishBlue;
+                transition: 500ms ease-in;
+                &:hover {
+                    color: color.$veryDarkViolet;
+                }
+            }
+            .btn {
+                min-width: 125px;
+                border: 2px solid color.$veryDarkViolet;
+                padding: 1em 0.8em;
+                margin: auto 0em;
+                margin-left: 1.3em;
+                font-size: clamp(0.7rem, 0.9vw, 2.5rem);
+                color: color.$veryDarkViolet;
+                transition: 500ms ease-in;
+                &:hover {
+                    background-color: color.$veryDarkViolet;
+                    color: color.$veryLightGray;
+                }
+            }
         }
     }
 }

@@ -13,9 +13,9 @@
     <header>
         <div class="header_mobile">
             <div class="logo">
-                <img src="./assets/icons/logo.svg" class="logo" alt="">
+                <img src="./assets/icons/logo.svg" alt="">
             </div>
-            <button class="hamburger__toggle" id="menu">
+            <button class="hamburger__toggle mobile" id="menu">
                 <span class="hamburger__icon"></span>
             </button>
         </div>
@@ -30,15 +30,23 @@
         </div>
     </header>
     <main>
-        <div class="start">
-            <img src="./assets/img/image-intro-mobile.jpg" alt="">
+        <div class="start" id="section_1">
+            <img src="./assets/img/image-intro-mobile.jpg" class="mobile" alt="">
+            <div class="plans-top-left-img">
+                <img src="./assets/img/bg-pattern-intro-left-desktop.svg" class="desktop" alt="">
+            </div>
+            <div class="plans-bottom-right-img">
+                <img src="./assets/img/bg-pattern-intro-right-desktop.svg" class="desktop" alt="">
+            </div>
             <div class="plans">
+                <img src="./assets/img/image-intro-desktop.jpg" class="desktop" alt="">
                 <div class="plans-top-left-img">
-                    <img src="./assets/img/bg-pattern-intro-left-mobile.svg" alt="">
+                    <img src="./assets/img/bg-pattern-intro-left-mobile.svg" class="mobile" alt="">
                 </div>
                 <div class="plans-bottom-right-img">
-                    <img src="./assets/img/bg-pattern-intro-right-mobile.svg" alt="">
+                    <img src="./assets/img/bg-pattern-intro-right-mobile.svg" class="mobile" alt="">
                 </div>
+                <hr class="desktop">
                 <h1>Humanizing your insurance.</h1>
                 <p>
                     Get your life insurance coverage easier and faster. We blend our expertise
@@ -50,7 +58,7 @@
                 </button>
             </div>
         </div>
-        <div class="content_sm">
+        <div class="content_sm" id="section_2">
             <hr />
             <h2>We're different</h2>
             <div class="ms-box">
@@ -78,8 +86,9 @@
                 </p>
             </div>
         </div>
-        <div class="work_content">
-            <img src="./assets/img/bg-pattern-how-we-work-mobile.svg" alt="">
+        <div class="work_content" id="section_3">
+            <img src="./assets/img/bg-pattern-how-we-work-mobile.svg" class="mobile" alt="">
+            <img src="./assets/img/bg-pattern-how-we-work-desktop.svg" class="desktop" alt="">
             <h3>Find out more about how we work</h3>
             <button>
                 How we work
@@ -87,7 +96,8 @@
         </div>
     </main>
     <footer>
-        <img src="./assets/img/bg-pattern-footer-mobile.svg" class="pattern-footer" alt="">
+        <img src="./assets/img/bg-pattern-footer-mobile.svg" class="pattern-footer mobile" alt="">
+        <img src="./assets/img/bg-pattern-footer-desktop.svg" class="pattern-footer desktop" alt="">
         <div class="footer_header">
             <img src="./assets/icons/logo.svg" alt="">
             <div class="socials">
@@ -131,6 +141,7 @@
         </div>
     </footer>
     <script src="./js/navbar.js"></script>
+    <script src="./js/scrolling.js"></script>
 </body>
 
 </html>

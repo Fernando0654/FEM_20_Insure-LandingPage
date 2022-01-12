@@ -23,6 +23,14 @@ body {
     animation: disappear 500ms ease-in forwards;
 }
 
+.desktop {
+    display: none !important;
+}
+
+.mobile {
+    display: block !important;
+}
+
 @keyframes appear {
     from {
         margin-top: -140vh;
@@ -38,5 +46,14 @@ body {
     }
     to {
         margin-top: -140vh;
+    }
+}
+
+@media (min-width: 950px) {
+    .mobile {
+        display: none !important;
+    }
+    .desktop {
+        display: block !important;
     }
 }

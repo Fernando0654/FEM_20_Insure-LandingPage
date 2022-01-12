@@ -1,3 +1,8 @@
+@mixin defaultViewDesktop {
+    width: 100%;
+    max-width: 1120px;
+}
+
 @mixin flexCenter($direction) {
     display: flex;
     flex-direction: $direction;
